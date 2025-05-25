@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TransGO | Text Translator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://raw.githubusercontent.com/Redwiat/redwiat.github.io/main/favicon-redwiat.png"
+    type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Translator Box -->
+  <div class="translator-box">
+
+    <!-- Title inside the translator box -->
+    <h1 class="title">TransGO</h1>
+
+    <div class="content-wrapper">
+      <div class="text-area">
+        <textarea class="input-field" placeholder="Write something here..."></textarea>
+        <textarea class="output-field" readonly placeholder="Translation will appear here..."></textarea>
+      </div>
+      <div class="options-panel">
+        <div class="lang-selection source-lang">
+          <select></select>
+          <div class="action-buttons">
+            <i class="fas fa-volume-up speaker-input"></i>
+            <i class="fas fa-copy copy-input"></i>
+          </div>
+        </div>
+        <button class="swap-button"><i class="fas fa-exchange-alt"></i></button>
+        <div class="lang-selection target-lang">
+          <div class="action-buttons">
+            <i class="fas fa-volume-up speaker-output"></i>
+            <i class="fas fa-copy copy-output"></i>
+          </div>
+          <select></select>
+        </div>
+      </div>
+    </div>
+    <button class="translate-button">Convert Now</button>
+  </div>
+
+  <!-- Chatbot Widget -->
+  <div class="chatbot-widget" id="chatbot-widget">
+    <div class="chatbot-toggle" id="chatbot-toggle">
+      <i class="fas fa-comments"></i>
+    </div>
+    <div class="chatbot-container" id="chatbot-container">
+      <div class="chatbot-header">
+        <h3>TransGO Assistant</h3>
+        <button class="close-chatbot" id="close-chatbot"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="message bot">
+          <div class="message-content">
+            Hello! I'm TransGO Assistant. How can I help you with translations today?
+          </div>
+        </div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything about languages...">
+        <button class="send-message" id="send-message"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="myscripts.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+
+</html>
